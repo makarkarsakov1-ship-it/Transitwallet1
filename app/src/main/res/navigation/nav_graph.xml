@@ -19,4 +19,9 @@
         android:name="com.transitwallet.app.ui.history.HistoryFragment"
         android:label="История" />
 
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.transitwallet.app.ui.settings.SettingsFragment"
+        android:label="Настройки" />
+
 </navigation>

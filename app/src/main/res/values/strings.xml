@@ -4,6 +4,7 @@
     <string name="tab_cards">Карты</string>
     <string name="tab_scan">Сканировать</string>
     <string name="tab_history">История</string>
+    <string name="tab_settings">Настройки</string>
     <string name="scan_prompt">Приложи карту к телефону</string>
     <string name="reading_card">Читаю карту…</string>
     <string name="card_added">Карта добавлена!</string>
@@ -16,4 +17,22 @@
     <string name="delete_confirm">Удалить эту карту из кошелька?</string>
     <string name="cancel">Отмена</string>
     <string name="delete">Удалить</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_theme">Тема оформления</string>
+    <string name="settings_theme_dark">Тёмная</string>
+    <string name="settings_theme_light">Светлая</string>
+    <string name="settings_theme_system">Системная</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_low_balance">Уведомлять о низком балансе</string>
+    <string name="settings_low_balance_threshold">Порог низкого баланса</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_version">Версия</string>
+    <string name="settings_developer">Разработчик</string>
+    <string name="settings_developer_name">Transit Wallet Team</string>
+    <string name="history_title">История поездок</string>
+    <string name="history_empty">История пуста.\nПриложи карту для обновления.</string>
+    <string name="history_tap_in">Вход</string>
+    <string name="history_tap_out">Выход</string>
+    <string name="history_topup">Пополнение</string>
+    <string name="rubles">₽</string>
 </resources>

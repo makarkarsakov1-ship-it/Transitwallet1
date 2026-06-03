@@ -2,15 +2,18 @@ package com.transitwallet.app.ui;
 
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
+import androidx.preference.PreferenceManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.transitwallet.app.R;
 import com.transitwallet.app.ui.cards.CardsViewModel;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        applyTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -40,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         setupNfc();
         observeViewModel();
+    }
+
+    private void applyTheme() {
+        SharedPreferences prefs =
+            PreferenceManager.getDefaultSharedPreferences(this);
+        int mode = prefs.getInt("theme_mode",
+            AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        AppCompatDelegate.setDefaultNightMode(mode);
     }
 
     private void setupNfc() {

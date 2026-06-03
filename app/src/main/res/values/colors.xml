@@ -12,6 +12,8 @@
     <color name="text_secondary">#8A9BB8</color>
     <color name="text_hint">#4A5568</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="divider">#1E2433</color>
     <color name="troika_gradient_start">#1A237E</color>
     <color name="troika_gradient_end">#283593</color>
     <color name="strelka_gradient_start">#1B5E20</color>
@@ -20,4 +22,11 @@
     <color name="ediniy_gradient_end">#C62828</color>
     <color name="unknown_gradient_start">#37474F</color>
     <color name="unknown_gradient_end">#455A64</color>
+    <!-- Светлая тема -->
+    <color name="background_light">#F5F7FA</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_nav_light">#FFFFFF</color>
+    <color name="text_primary_light">#0D0F14</color>
+    <color name="text_secondary_light">#4A5568</color>
+    <color name="divider_light">#E2E8F0</color>
 </resources>
