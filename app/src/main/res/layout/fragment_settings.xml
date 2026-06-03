@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/backgroundColor">
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,11 +17,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="@string/settings_title"
-            android:textColor="?attr/textPrimaryColor"
+            android:textColor="@color/text_primary"
             android:textSize="28sp"
             android:textStyle="bold" />
 
-        <!-- Тема -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,70 +35,50 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="?attr/surfaceColor"
+            app:cardBackgroundColor="@color/surface"
             app:cardElevation="0dp">
 
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/theme_radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
-                <RadioGroup
-                    android:id="@+id/theme_radio_group"
+                <RadioButton
+                    android:id="@+id/theme_system"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:text="@string/settings_theme_system"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
 
-                    <RadioButton
-                        android:id="@+id/theme_system"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:gravity="center_vertical"
-                        android:paddingStart="16dp"
-                        android:text="@string/settings_theme_system"
-                        android:textColor="?attr/textPrimaryColor"
-                        android:textSize="16sp" />
+                <RadioButton
+                    android:id="@+id/theme_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:text="@string/settings_theme_light"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?attr/dividerColor"
-                        android:layout_marginStart="16dp" />
+                <RadioButton
+                    android:id="@+id/theme_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:text="@string/settings_theme_dark"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
 
-                    <RadioButton
-                        android:id="@+id/theme_light"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:gravity="center_vertical"
-                        android:paddingStart="16dp"
-                        android:text="@string/settings_theme_light"
-                        android:textColor="?attr/textPrimaryColor"
-                        android:textSize="16sp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="?attr/dividerColor"
-                        android:layout_marginStart="16dp" />
-
-                    <RadioButton
-                        android:id="@+id/theme_dark"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:gravity="center_vertical"
-                        android:paddingStart="16dp"
-                        android:text="@string/settings_theme_dark"
-                        android:textColor="?attr/textPrimaryColor"
-                        android:textSize="16sp" />
-
-                </RadioGroup>
-            </LinearLayout>
+            </RadioGroup>
         </androidx.cardview.widget.CardView>
 
-        <!-- Уведомления -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,9 +93,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="?attr/surfaceColor"
+            app:cardBackgroundColor="@color/surface"
             app:cardElevation="0dp">
 
             <LinearLayout
@@ -136,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_low_balance"
-                        android:textColor="?attr/textPrimaryColor"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -145,12 +124,6 @@
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="?attr/dividerColor"
-                    android:layout_marginStart="16dp" />
 
                 <LinearLayout
                     android:id="@+id/threshold_row"
@@ -166,14 +139,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_low_balance_threshold"
-                        android:textColor="?attr/textPrimaryColor"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/threshold_value"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100 ₽"
+                        android:text="100 &#8381;"
                         android:textColor="@color/accent_blue"
                         android:textSize="16sp" />
 
@@ -181,7 +154,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- О приложении -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,9 +168,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="?attr/surfaceColor"
+            app:cardBackgroundColor="@color/surface"
             app:cardElevation="0dp">
 
             <LinearLayout
@@ -219,23 +190,17 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_version"
-                        android:textColor="?attr/textPrimaryColor"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1.0.0"
-                        android:textColor="?attr/textSecondaryColor"
+                        android:textColor="@color/text_secondary"
                         android:textSize="16sp" />
 
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="?attr/dividerColor"
-                    android:layout_marginStart="16dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -250,14 +215,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_developer"
-                        android:textColor="?attr/textPrimaryColor"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/settings_developer_name"
-                        android:textColor="?attr/textSecondaryColor"
+                        android:textColor="@color/text_secondary"
                         android:textSize="16sp" />
 
                 </LinearLayout>
