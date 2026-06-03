@@ -25,7 +25,7 @@ public class CardsAdapter extends
     }
 
     public void setCards(List<TransitCard> newCards) {
-        cards = newCards;
+        cards = newCards != null ? newCards : new ArrayList<>();
         notifyDataSetChanged();
     }
 
@@ -48,15 +48,15 @@ public class CardsAdapter extends
     public int getItemCount() { return cards.size(); }
 
     class CardViewHolder extends RecyclerView.ViewHolder {
-        TextView cardName, balanceValue, cardNumber;
+        TextView cardName, cardTypeBig, balanceValue;
         View cardRoot;
 
         CardViewHolder(View v) {
             super(v);
-            cardRoot     = v.findViewById(R.id.card_root);
-            cardName     = v.findViewById(R.id.card_name);
+            cardRoot    = v.findViewById(R.id.card_root);
+            cardName    = v.findViewById(R.id.card_name);
+            cardTypeBig = v.findViewById(R.id.card_type_big);
             balanceValue = v.findViewById(R.id.balance_value);
-            cardNumber   = v.findViewById(R.id.card_number);
         }
 
         void bind(TransitCard card) {
@@ -70,17 +70,15 @@ public class CardsAdapter extends
             grad.setCornerRadius(60f);
             cardRoot.setBackground(grad);
 
-            cardName.setText(card.getDisplayName());
+            cardName.setText(card.cardNumber);
+            cardTypeBig.setText(card.getDisplayName());
 
             if (card.balance >= 0) {
                 balanceValue.setText(
-                    String.format("%.2f \u20bd", card.balance)
-                );
+                    String.format("%.2f \u20bd", card.balance));
             } else {
                 balanceValue.setText("\u2014 \u20bd");
             }
-
-            cardNumber.setText(card.cardNumber);
 
             cardRoot.setOnLongClickListener(v -> {
                 deleteListener.onDelete(card);

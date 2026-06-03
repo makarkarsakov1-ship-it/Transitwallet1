@@ -7,13 +7,13 @@
     android:background="@color/background">
 
     <TextView
-        android:id="@+id/scan_title"
+        android:id="@+id/pay_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Добавить карту"
+        android:layout_marginTop="32dp"
+        android:text="Оплата"
         android:textColor="@color/text_primary"
-        android:textSize="28sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,41 +21,42 @@
 
     <FrameLayout
         android:id="@+id/nfc_animation_container"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         app:layout_constraintBottom_toTopOf="@id/scan_status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scan_title">
+        app:layout_constraintTop_toBottomOf="@id/pay_title"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <View
             android:id="@+id/pulse_ring_3"
-            android:layout_width="220dp"
-            android:layout_height="220dp"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
             android:layout_gravity="center"
             android:alpha="0"
             android:background="@drawable/nfc_pulse_ring" />
 
         <View
             android:id="@+id/pulse_ring_2"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:alpha="0"
             android:background="@drawable/nfc_pulse_ring" />
 
         <View
             android:id="@+id/pulse_ring_1"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
             android:alpha="0"
             android:background="@drawable/nfc_pulse_ring" />
 
         <View
             android:id="@+id/nfc_center"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_gravity="center"
             android:background="@drawable/nfc_center_bg" />
 
@@ -63,10 +64,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="NFC"
+            android:text="&#41447;"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textSize="32sp" />
 
     </FrameLayout>
 
@@ -74,26 +74,95 @@
         android:id="@+id/scan_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="@string/scan_prompt"
-        android:textColor="@color/text_secondary"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Поднесите телефон\nк терминалу"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nfc_animation_container" />
 
     <TextView
         android:id="@+id/scan_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Поддерживаются: Тройка, Стрелка, Единый"
-        android:textColor="@color/text_hint"
-        android:textSize="13sp"
+        android:text="Идёт чтение карты..."
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scan_status" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/active_card_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="32dp"
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        card:cardCornerRadius="16dp"
+        card:cardBackgroundColor="@color/surface_card"
+        card:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/nfc_center_bg"
+                android:gravity="center"
+                android:text="&#128652;"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/active_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Единый проездной"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/active_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="№ 1234 5678"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/active_card_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0,00 ₽"
+                android:textColor="@color/accent_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
