@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cardsFragment">
+
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="com.transitwallet.app.ui.cards.CardsFragment"
+        android:label="Карты" />
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.transitwallet.app.ui.scan.ScanFragment"
+        android:label="Сканировать" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.transitwallet.app.ui.history.HistoryFragment"
+        android:label="История" />
+
+</navigation>

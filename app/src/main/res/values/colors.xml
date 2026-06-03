@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0D0F14</color>
+    <color name="surface">#161A23</color>
+    <color name="surface_card">#1E2433</color>
+    <color name="surface_nav">#12151E</color>
+    <color name="accent_blue">#4A90E2</color>
+    <color name="accent_blue_dark">#2E6DB4</color>
+    <color name="accent_green">#4CAF88</color>
+    <color name="accent_orange">#F5A623</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8A9BB8</color>
+    <color name="text_hint">#4A5568</color>
+    <color name="white">#FFFFFF</color>
+    <color name="troika_gradient_start">#1A237E</color>
+    <color name="troika_gradient_end">#283593</color>
+    <color name="strelka_gradient_start">#1B5E20</color>
+    <color name="strelka_gradient_end">#2E7D32</color>
+    <color name="ediniy_gradient_start">#B71C1C</color>
+    <color name="ediniy_gradient_end">#C62828</color>
+    <color name="unknown_gradient_start">#37474F</color>
+    <color name="unknown_gradient_end">#455A64</color>
+</resources>

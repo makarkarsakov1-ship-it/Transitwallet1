@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.transitwallet.app-debug-46:/drawable_circle_bg.xml.flat",
+        "source": "com.transitwallet.app-main-48:/drawable/circle_bg.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/xml_nfc_tech_filter.xml.flat",
+        "source": "com.transitwallet.app-main-48:/xml/nfc_tech_filter.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/layout_fragment_cards.xml.flat",
+        "source": "com.transitwallet.app-main-48:/layout/fragment_cards.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/layout_fragment_scan.xml.flat",
+        "source": "com.transitwallet.app-main-48:/layout/fragment_scan.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/layout_item_transit_card.xml.flat",
+        "source": "com.transitwallet.app-main-48:/layout/item_transit_card.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/color_nav_selector.xml.flat",
+        "source": "com.transitwallet.app-main-48:/color/nav_selector.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/layout_activity_main.xml.flat",
+        "source": "com.transitwallet.app-main-48:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/drawable_nfc_center_bg.xml.flat",
+        "source": "com.transitwallet.app-main-48:/drawable/nfc_center_bg.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/drawable_nfc_pulse_ring.xml.flat",
+        "source": "com.transitwallet.app-main-48:/drawable/nfc_pulse_ring.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/layout_fragment_history.xml.flat",
+        "source": "com.transitwallet.app-main-48:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/navigation_nav_graph.xml.flat",
+        "source": "com.transitwallet.app-main-48:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.transitwallet.app-debug-46:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.transitwallet.app-main-48:/menu/bottom_nav_menu.xml"
+    }
+]

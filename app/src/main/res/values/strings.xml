@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Transit Wallet</string>
+    <string name="tab_cards">Карты</string>
+    <string name="tab_scan">Сканировать</string>
+    <string name="tab_history">История</string>
+    <string name="scan_prompt">Приложи карту к телефону</string>
+    <string name="reading_card">Читаю карту…</string>
+    <string name="card_added">Карта добавлена!</string>
+    <string name="card_updated">Карта обновлена!</string>
+    <string name="read_error">Не удалось прочитать карту</string>
+    <string name="no_cards">Нет добавленных карт.\nПриложи транспортную карту к телефону.</string>
+    <string name="nfc_not_supported">NFC не поддерживается</string>
+    <string name="nfc_disabled">Включи NFC в настройках</string>
+    <string name="delete_card">Удалить карту</string>
+    <string name="delete_confirm">Удалить эту карту из кошелька?</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+</resources>
